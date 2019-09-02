@@ -8,6 +8,10 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    { // 默认打开页面
+      path: '/',
+      redirect: '/home',
+    },
     {
       path: '/',
       name: 'home',
