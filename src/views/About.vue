@@ -62,7 +62,7 @@ export default class About extends Vue {
       text: 'greenColor',
     },
     {
-      name: [curtain],
+      name: [curtain()],
       text: 'curtain',
     },
     {
@@ -70,7 +70,7 @@ export default class About extends Vue {
       text: 'blur',
     },
     {
-      name: [mosaic],
+      name: [mosaic()],
       text: 'mosaic',
     },
   ];
@@ -101,13 +101,13 @@ export default class About extends Vue {
       //   }
       // });
       // test
-      ctx.fillText('reflectionUpDown', 240, startY + height);
-      ctx.putImageData(reflectionUpDown(imgData), 0, height);
-      ctx.fillText('reflectionLeftRight', 240 + width, startY);
-      ctx.putImageData(reflectionLeftRight(imgData), width, 0);
-      ctx.fillText('reflectionUpDown + reflectionLeftRight', 240 + width, startY + height);
+      // ctx.fillText('reflectionUpDown', 240, startY + height);
+      // ctx.putImageData(reflectionUpDown(imgData), 0, height);
+      // ctx.fillText('reflectionLeftRight', 240 + width, startY);
+      // ctx.putImageData(reflectionLeftRight(imgData), width, 0);
+      // ctx.fillText('reflectionUpDown + reflectionLeftRight', 240 + width, startY + height);
       // ctx.putImageData(reflectionUpDown(reflectionLeftRight(imgData)), width, height);
-      ctx.putImageData(compose(reflectionLeftRight, curtain(), mosaic())(imgData), width, height);
+      ctx.putImageData(compose(curtain())(imgData), width, height);
     }, 50);
   }
 }

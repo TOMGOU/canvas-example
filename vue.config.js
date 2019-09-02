@@ -4,6 +4,6 @@ const pkg = require('./package.json')
 const isProduction = process.env.RUN_ENV === 'production';
 const baseUrl = 'https://tomgou.github.io/canvas-example/www';
 module.exports = {
-  baseUrl: isProduction ?  baseUrl: '/',
+  publicPath: isProduction ?  baseUrl: '/',
   outputDir: 'www',
 }
