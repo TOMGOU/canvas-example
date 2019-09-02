@@ -92,14 +92,14 @@ export default class About extends Vue {
       ctx.fillText('origin', 240, startY);
       const imgData = ctx.getImageData(0, 0, 480, 221);
       // all methods
-      // this.arr.forEach((item, index) => {
-      //   if (index > 0) {
-      //     const X = index % 3;
-      //     const Y = Math.floor(index / 3);
-      //     ctx.putImageData(compose(...item.name)(imgData), X * width, Y * height);
-      //     ctx.fillText(item.text, 240 + X * width, startY + Y * height);
-      //   }
-      // });
+      this.arr.forEach((item, index) => {
+        if (index > 0) {
+          const X = index % 3;
+          const Y = Math.floor(index / 3);
+          ctx.putImageData(compose(...item.name)(imgData), X * width, Y * height);
+          ctx.fillText(item.text, 240 + X * width, startY + Y * height);
+        }
+      });
       // test
       // ctx.fillText('reflectionUpDown', 240, startY + height);
       // ctx.putImageData(reflectionUpDown(imgData), 0, height);
@@ -107,7 +107,7 @@ export default class About extends Vue {
       // ctx.putImageData(reflectionLeftRight(imgData), width, 0);
       // ctx.fillText('reflectionUpDown + reflectionLeftRight', 240 + width, startY + height);
       // ctx.putImageData(reflectionUpDown(reflectionLeftRight(imgData)), width, height);
-      ctx.putImageData(compose(curtain())(imgData), width, height);
+      // ctx.putImageData(compose(curtain())(imgData), width, height);
     }, 50);
   }
 }
