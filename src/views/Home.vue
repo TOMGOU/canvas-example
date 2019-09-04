@@ -34,7 +34,7 @@ export default class Home extends Vue {
     ctx.strokeStyle = '#fff';
     ctx.textBaseline = 'top';
     const text = '当然啦，除上面的场景文字识别外，历史悠久的手写体的识别到现在还是一件具有挑战的课题，在深度学习的浪潮下，手写体的识别已经前进了一大步，但是尚且没达到印刷体识别那种可以商用的地步，所以啊，OCR的研究还得不断地进行下去。';
-    fillAutoWrapText(ctx, text, 0, 80, 300, 50, '20px PingFang-SC-Heavy');
+    fillAutoWrapText(ctx, text, 0, 80, 300, 50, '20px PingFang-SC-Heavy', 2);
     strokeAutoWrapText(ctx, text, 400, 80, 300, 50, '20px PingFang-SC-Heavy');
     fillRoundRect(ctx, 800, 80, 300, 300);
     strokeRoundRect(ctx, 1200, 80, 300, 300);
